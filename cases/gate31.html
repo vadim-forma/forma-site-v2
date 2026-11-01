@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CASE 001 — GATE31: Не просто вещь | FORMA®</title>
+<meta name="description" content="Концептуальный кейс FORMA: исследование продукта GATE31 Линц, контент-концепция, план на 7 дней, сценарии видео и тексты.">
+<meta name="theme-color" content="#08090B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#08090B;--panel:#17181D;--panel2:#101115;--line:rgba(255,255,255,.12);--line2:rgba(255,255,255,.22);--text:#F5F5F6;--muted:#A4A7AE;--dim:#737780;--font:'Inter',system-ui,sans-serif;--pad:clamp(20px,4vw,52px);--max:1180px;--ease:cubic-bezier(.2,.9,.3,1);color-scheme:dark;scroll-behavior:smooth;scroll-padding-top:90px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(1000px 620px at 70% -8%,#202126,transparent 62%),var(--bg);color:var(--text);font:400 1rem/1.65 var(--font);letter-spacing:-.012em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.wrap{width:100%;max-width:var(--max);margin:auto;padding:0 var(--pad)}
+h1,h2,h3{font-weight:600;letter-spacing:-.055em;line-height:1.02}
+p{color:var(--muted);max-width:68ch}
+.eyebrow{font:500 .72rem/1.4 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.topbar{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);background:rgba(8,9,11,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.topbar .wrap{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:700;letter-spacing:.08em;font-size:.9rem}
+.back{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:.86rem;transition:color .2s}
+.back:hover{color:#fff}
+.hero{padding:clamp(62px,10vw,126px) 0 54px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 68% 40%,#000,transparent 78%);opacity:.45}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,5vw,72px);align-items:center}
+.case-no{font:500 .76rem/1 'IBM Plex Mono',monospace;letter-spacing:.15em;color:var(--muted);margin-bottom:26px}
+h1{font-size:clamp(4rem,10vw,8.7rem);letter-spacing:-.085em;line-height:.82;margin:22px 0 28px}
+h1 span{display:block;color:#858891}
+.hero-lead{font-size:clamp(1.05rem,1.8vw,1.3rem);max-width:34ch}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.hero-tags span,.pill{border:1px solid var(--line2);border-radius:99px;padding:7px 12px;color:var(--muted);font-size:.76rem}
+.hero-image{position:relative;min-height:520px;border:1px solid var(--line2);border-radius:24px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#f0f0f0,#b9bbc0 75%);display:flex;align-items:center;justify-content:center}
+.hero-image img{width:100%;height:100%;max-height:640px;object-fit:contain;padding:22px}
+.hero-image:after{content:"GATE31 / LINZ";position:absolute;bottom:18px;left:20px;color:#17181d;font:500 .7rem 'IBM Plex Mono',monospace;letter-spacing:.14em}
+.disclaimer{margin-top:26px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);font-size:.84rem;color:var(--muted);max-width:760px}
+.section{padding:clamp(66px,9vw,112px) 0 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
+.section h2{font-size:clamp(2.2rem,5vw,4.3rem);max-width:15ch}
+.section-intro{max-width:48ch;font-size:.96rem}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.panel{border:1px solid var(--line);border-radius:20px;padding:clamp(22px,3vw,34px);background:linear-gradient(160deg,#1c1d22,#101115);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.panel h3{font-size:clamp(1.35rem,2.2vw,1.8rem);margin:12px 0}
+.panel p{font-size:.94rem}
+.fact-list{display:grid;gap:0;margin-top:18px}
+.fact{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line);font-size:.9rem}
+.fact b{font-weight:600;color:#fff}
+.fact span{color:var(--muted)}
+.image-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.image-tile{margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#eee}
+.image-tile img{display:block;width:100%;height:100%;max-height:520px;object-fit:cover}
+.image-tile figcaption{padding:11px 14px;background:#121317;color:#a4a7ae;font-size:.76rem}
+.insight{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.insight .panel{min-height:190px}
+.insight .n{font:500 .72rem 'IBM Plex Mono',monospace;color:var(--dim)}
+.insight h3{font-size:1.35rem;margin:20px 0 10px}
+.concept{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;align-items:stretch}
+.concept-mark{border-radius:20px;padding:clamp(24px,4vw,44px);background:#f0f0f0;color:#08090b;display:flex;flex-direction:column;justify-content:space-between;min-height:300px}
+.concept-mark .big{font-size:clamp(3.2rem,8vw,7rem);font-weight:700;letter-spacing:-.09em;line-height:.8}
+.concept-mark p{color:#55575d}
+.concept-copy{display:flex;flex-direction:column;justify-content:center}
+.concept-copy h3{font-size:clamp(2rem,4vw,3.5rem);margin:12px 0}
+.concept-copy p{max-width:56ch}
+.week{display:grid;gap:10px}
+.day{display:grid;grid-template-columns:76px minmax(0,1fr) minmax(120px,.45fr);gap:18px;align-items:start;padding:19px 20px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(110deg,#1b1c20,#101115)}
+.day-num{font:500 .72rem 'IBM Plex Mono',monospace;color:var(--dim);padding-top:4px}
+.day h3{font-size:1.1rem;letter-spacing:-.03em;margin-bottom:6px}
+.day p{font-size:.88rem}
+.day .format{font-size:.78rem;color:#fff;text-align:right}
+.script-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.script{border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1b1c20,#101115);overflow:hidden}
+.script-top{padding:22px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 90% 0%,rgba(255,255,255,.12),transparent 65%)}
+.script-top small{font:500 .7rem 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.1em}
+.script-top h3{font-size:1.45rem;margin-top:12px}
+.script-body{padding:20px 22px}
+.script-body p{font-size:.87rem;margin-bottom:12px}
+.script-body b{color:#fff}
+.steps{list-style:none;display:grid;gap:12px}
+.steps li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:.87rem;color:var(--muted)}
+.steps li i{font:500 .7rem 'IBM Plex Mono',monospace;color:#fff;font-style:normal}
+.copy-list{display:grid;gap:12px}
+.copy{border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1b1c20,#101115);padding:clamp(20px,3vw,30px)}
+.copy-head{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:16px}
+.copy h3{font-size:1.25rem}
+.copy p{font-size:.92rem;color:#c1c3c9;white-space:pre-line}
+.copy .label{font:500 .68rem 'IBM Plex Mono',monospace;color:var(--dim);letter-spacing:.12em}
+.visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.visual{padding:20px;border:1px solid var(--line);border-radius:16px;background:#15161a}
+.visual b{display:block;font-size:1rem;margin-bottom:10px}
+.visual p{font-size:.84rem}
+.metrics{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.metrics span{padding:8px 12px;border-radius:99px;border:1px solid var(--line2);font-size:.8rem;color:var(--muted)}
+.source{margin-top:26px;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:.82rem;color:var(--muted)}
+.source a{text-decoration:underline;text-underline-offset:3px;color:#fff}
+.footer{padding:70px 0 34px;margin-top:70px;border-top:1px solid var(--line)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.footer p{font-size:.82rem}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:clamp(24px,4vw,42px);border:1px solid var(--line2);border-radius:22px;background:radial-gradient(600px 200px at 10% 0%,rgba(255,255,255,.07),transparent 60%),#141519;margin-top:70px}
+.cta h2{font-size:clamp(1.8rem,3vw,2.8rem);margin-bottom:8px}
+.btn{display:inline-flex;align-items:center;gap:16px;padding:13px 20px;border-radius:99px;background:#fff;color:#08090b;font-weight:600;white-space:nowrap}
+@media(max-width:900px){.hero-grid,.concept{grid-template-columns:1fr}.hero-image{min-height:420px}.insight{grid-template-columns:1fr}.script-grid{grid-template-columns:1fr}.visual-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.section-head{display:block}.section-intro{margin-top:14px}.grid2,.image-row{grid-template-columns:1fr}.day{grid-template-columns:48px 1fr}.day .format{grid-column:2;text-align:left}.hero-image{min-height:340px}.cta{align-items:flex-start;flex-direction:column}.btn{width:100%;justify-content:space-between}.fact{grid-template-columns:105px 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html">FORMA®</a>
+    <a class="back" href="../index.html#cases">← Все кейсы</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="case-no">FORMA / CASE 001 · FASHION</div>
+      <div class="eyebrow">GATE31 · LINZ TROUSERS</div>
+      <h1>НЕ ПРОСТО<br><span>ВЕЩЬ.</span></h1>
+      <p class="hero-lead">Одна конструктивная деталь может стать началом целой контент-истории. Показываем, как раскрыть характер модели через форму, движение и стилизацию.</p>
+      <div class="hero-tags"><span>Brand research</span><span>Content strategy</span><span>7-day plan</span><span>Video scripts</span></div>
+      <div class="disclaimer">Концептуальный проект FORMA на основе открытых материалов GATE31. Это независимая демонстрационная работа, не официальный кейс и не подтверждение сотрудничества с брендом.</div>
+    </div>
+    <div class="hero-image">
+      <img src="https://cdn.insales-shop.ru/images/products/1/1633/3355780705/M100TR_%D0%91%D1%80%D1%8E%D0%BA%D0%B8_%D0%9B%D0%B8%D0%BD%D1%86_%D1%81_%D0%B0%D1%81%D0%B8%D0%BC%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%87%D0%BD%D1%8B%D0%BC_%D0%BF%D0%BE%D1%8F%D1%81%D0%BE%D0%BC_%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D0%B8%CC%86__1_.webp" alt="Брюки GATE31 Линц, вид спереди">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">01 / PRODUCT STUDY</div><h2>Сначала — продукт.</h2></div>
+      <p class="section-intro">В основе кейса не абстрактный тренд, а конкретная модель и её особенности, которые можно показать в контенте.</p>
+    </div>
+    <div class="grid2">
+      <article class="panel">
+        <div class="eyebrow">Что подтверждено карточкой товара</div>
+        <h3>Брюки Линц с асимметричным поясом</h3>
+        <p>Чёрные брюки прямого кроя из плотной костюмной ткани. Спереди — декоративный запах, который создаёт асимметрию. В боковых швах расположены карманы. Модель входит в костюм с пиджаком Линц.</p>
+        <div class="fact-list">
+          <div class="fact"><b>Силуэт</b><span>Прямой крой</span></div>
+          <div class="fact"><b>Деталь</b><span>Декоративный запах и асимметричный пояс</span></div>
+          <div class="fact"><b>Материал</b><span>69% лавсан, 21% вискоза, 6% шерсть, 4% спандекс</span></div>
+          <div class="fact"><b>Производство</b><span>Псков</span></div>
+          <div class="fact"><b>Комплект</b><span>Пиджак Линц</span></div>
+        </div>
+      </article>
+      <article class="panel">
+        <div class="eyebrow">Как это можно раскрыть</div>
+        <h3>Не просто «чёрные брюки»</h3>
+        <p>Вместо общего описания модели контент может последовательно провести зрителя через три уровня: сначала общий силуэт, затем конструктивную деталь, после — варианты стилизации.</p>
+        <div class="fact-list">
+          <div class="fact"><b>Форма</b><span>Показать посадку и линию силуэта в движении.</span></div>
+          <div class="fact"><b>Деталь</b><span>Сделать асимметрию главным визуальным акцентом.</span></div>
+          <div class="fact"><b>Образ</b><span>Показать, как модель работает с разными базовыми вещами.</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="image-row">
+      <figure class="image-tile">
+        <img loading="lazy" src="https://cdn.insales-shop.ru/images/products/1/3801/3347001049/2409Gate_23912.webp" alt="Брюки Линц на модели, вид спереди">
+        <figcaption>01 / Посадка и общий силуэт</figcaption>
+      </figure>
+      <figure class="image-tile">
+        <img loading="lazy" src="https://cdn.insales-shop.ru/images/products/1/3793/3347001041/2409Gate_23966.webp" alt="Образ с брюками Линц и пиджаком">
+        <figcaption>02 / Модель в собранном образе</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">02 / CONTENT INSIGHT</div><h2>Из детали — в историю.</h2></div>
+      <p class="section-intro">Ниже — стратегическая интерпретация FORMA, а не утверждение о текущей стратегии или аудитории GATE31.</p>
+    </div>
+    <div class="insight">
+      <article class="panel"><div class="n">INSIGHT / 01</div><h3>Показать, а не только назвать</h3><p>Асимметрия лучше считывается в кадре: крупный план, движение ткани, фронтальный и боковой ракурсы.</p></article>
+      <article class="panel"><div class="n">INSIGHT / 02</div><h3>Дать контекст</h3><p>После знакомства с деталью показать вещь в цельном образе — так зритель видит не только конструкцию, но и способ носить модель.</p></article>
+      <article class="panel"><div class="n">INSIGHT / 03</div><h3>Собрать серию</h3><p>Три публикации связываются общей темой, но каждая отвечает на отдельный вопрос: как выглядит, чем отличается, с чем сочетать.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap concept">
+    <div class="concept-mark">
+      <div class="eyebrow" style="color:#777">CAMPAIGN IDEA / 001</div>
+      <div class="big">ОДНА<br>ДЕТАЛЬ.</div>
+      <p>Три взгляда на одну модель.</p>
+    </div>
+    <div class="concept-copy">
+      <div class="eyebrow">03 / CREATIVE DIRECTION</div>
+      <h3>Одна модель.<br>Три взгляда.</h3>
+      <p>Редакционная мини-серия о брюках Линц. Визуальный язык — чистый фон, графичные ракурсы, внимание к линии пояса и естественное движение. Без перегруженного реквизита: главным объектом остаётся изделие.</p>
+      <div class="hero-tags"><span>01 / Силуэт</span><span>02 / Конструкция</span><span>03 / Стилизация</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">04 / WEEK PLAN</div><h2>Контент-план на 7 дней.</h2></div>
+      <p class="section-intro">Пример недельной последовательности. Форматы и дни можно адаптировать под реальные площадки, частоту публикаций и материалы бренда.</p>
+    </div>
+    <div class="week">
+      <article class="day"><div class="day-num">DAY / 01</div><div><h3>Первое знакомство: «Необычная деталь в знакомой вещи»</h3><p>Короткое видео с общим силуэтом, затем быстрый переход на асимметричный пояс. Задача — зацепить взглядом и обозначить особенность модели.</p></div><div class="format">REELS / SHORT VIDEO</div></article>
+      <article class="day"><div class="day-num">DAY / 02</div><div><h3>Карусель: «Что делает Линц особенными?»</h3><p>4–5 кадров: общий вид, пояс, декоративный запах, карманы, образ целиком. К каждому кадру — короткая подпись без перегруза техническими деталями.</p></div><div class="format">КАРУСЕЛЬ</div></article>
+      <article class="day"><div class="day-num">DAY / 03</div><div><h3>Вовлечение: «Замечаете асимметрию?»</h3><p>Две сторис: сначала общий образ с вопросом, затем крупный план детали и короткое объяснение. Добавить опрос с вариантами ответа.</p></div><div class="format">STORIES</div></article>
+      <article class="day"><div class="day-num">DAY / 04</div><div><h3>Видео: «Форма в движении»</h3><p>Показать посадку спереди, сбоку и в шаге. Не использовать резкие монтажные эффекты — дать зрителю рассмотреть силуэт и ткань.</p></div><div class="format">REELS / SHORT VIDEO</div></article>
+      <article class="day"><div class="day-num">DAY / 05</div><div><h3>Пост: «Одна модель — три сочетания»</h3><p>Три стилистических направления: с базовой футболкой, с рубашкой или верхним слоем, с пиджаком Линц. Сочетания обозначены как идеи для съёмки.</p></div><div class="format">ПОСТ / КАРУСЕЛЬ</div></article>
+      <article class="day"><div class="day-num">DAY / 06</div><div><h3>Сторис: коротко о модели</h3><p>Ответить на вопросы по информации карточки товара: состав ткани, прямой крой, декоративный запах, производство. Добавить переход к карточке товара.</p></div><div class="format">STORIES / FAQ</div></article>
+      <article class="day"><div class="day-num">DAY / 07</div><div><h3>Финальное видео: «Деталь, которая меняет впечатление»</h3><p>Собрать в одном ролике три ключевых кадра недели: силуэт, асимметрия, готовый образ. Завершить спокойным приглашением посмотреть модель.</p></div><div class="format">REELS / SHORT VIDEO</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">05 / VIDEO SCRIPTS</div><h2>Три сценария коротких видео.</h2></div>
+      <p class="section-intro">Сценарии рассчитаны на вертикальный формат. Точные секунды — ориентир для монтажа, не обязательный жёсткий тайминг.</p>
+    </div>
+    <div class="script-grid">
+      <article class="script">
+        <div class="script-top"><small>VIDEO / 01 · 12–15 SEC</small><h3>Необычная деталь</h3></div>
+        <div class="script-body">
+          <p><b>Задача:</b> привлечь внимание к асимметричному поясу.</p>
+          <ol class="steps">
+            <li><i>01</i><span>0–2 сек. Общий фронтальный кадр. Текст: «На первый взгляд — просто чёрные брюки».</span></li>
+            <li><i>02</i><span>2–5 сек. Камера приближается к поясу. Текст: «Но посмотрите на эту деталь».</span></li>
+            <li><i>03</i><span>5–9 сек. Крупный план декоративного запаха и асимметрии.</span></li>
+            <li><i>04</i><span>9–13 сек. Полный образ и короткое движение модели.</span></li>
+          </ol>
+          <p><b>Финал:</b> «Брюки Линц — на сайте GATE31».</p>
+        </div>
+      </article>
+      <article class="script">
+        <div class="script-top"><small>VIDEO / 02 · 15–18 SEC</small><h3>Форма в движении</h3></div>
+        <div class="script-body">
+          <p><b>Задача:</b> показать крой и силуэт без длинного описания.</p>
+          <ol class="steps">
+            <li><i>01</i><span>0–3 сек. Модель стоит прямо, кадр от талии до обуви. Текст: «Важен не только вид спереди».</span></li>
+            <li><i>02</i><span>3–7 сек. Медленный шаг навстречу камере — показать движение ткани.</span></li>
+            <li><i>03</i><span>7–11 сек. Поворот в профиль, затем кадр сзади.</span></li>
+            <li><i>04</i><span>11–16 сек. Возврат к фронтальному ракурсу и деталь пояса.</span></li>
+          </ol>
+          <p><b>Финал:</b> «Рассмотрите Линц ближе».</p>
+        </div>
+      </article>
+      <article class="script">
+        <div class="script-top"><small>VIDEO / 03 · 15–20 SEC</small><h3>Три сочетания</h3></div>
+        <div class="script-body">
+          <p><b>Задача:</b> показать стилистическую вариативность модели.</p>
+          <ol class="steps">
+            <li><i>01</i><span>0–5 сек. Образ с базовой футболкой. Подпись: «01 / На каждый день».</span></li>
+            <li><i>02</i><span>5–10 сек. Образ с рубашкой или лаконичным верхним слоем. «02 / Более собранно».</span></li>
+            <li><i>03</i><span>10–15 сек. Комплект с пиджаком Линц. «03 / Цельный костюм».</span></li>
+            <li><i>04</i><span>15–19 сек. Три быстрых кадра рядом или последовательный монтаж.</span></li>
+          </ol>
+          <p><b>Финал:</b> «Одна модель — несколько настроений».</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">06 / COPYWRITING</div><h2>Тексты для публикаций.</h2></div>
+      <p class="section-intro">Черновики адаптированы под концепцию кейса. Перед публикацией их нужно сверить с актуальной карточкой товара и tone of voice бренда.</p>
+    </div>
+    <div class="copy-list">
+      <article class="copy">
+        <div class="copy-head"><h3>01 / Подпись к первому видео</h3><span class="label">REEL CAPTION</span></div>
+        <p>На первый взгляд — лаконичные чёрные брюки. Но характер модели раскрывается в деталях: прямой силуэт, плотная костюмная ткань и декоративный запах, который создаёт асимметрию спереди.
+
+Брюки Линц — когда одна конструктивная особенность меняет впечатление от привычной формы.
+
+Посмотрите модель на сайте GATE31.</p>
+      </article>
+      <article class="copy">
+        <div class="copy-head"><h3>02 / Текст для карусели</h3><span class="label">PRODUCT DETAIL</span></div>
+        <p>У Линц есть деталь, которую хочется рассмотреть ближе.
+
+Асимметричный пояс и декоративный запах добавляют выразительности прямому силуэту. При этом модель остаётся лаконичной по цвету и форме.
+
+Листайте, чтобы рассмотреть конструкцию, посадку и детали изделия.</p>
+      </article>
+      <article class="copy">
+        <div class="copy-head"><h3>03 / Пост о сочетаниях</h3><span class="label">STYLING</span></div>
+        <p>Одна модель — несколько вариантов образа.
+
+01. С базовой футболкой — спокойно и на каждый день.
+02. С рубашкой или лаконичным верхним слоем — более собранное сочетание.
+03. С пиджаком Линц — цельный костюмный образ.
+
+Какой вариант ближе вам?</p>
+      </article>
+      <article class="copy">
+        <div class="copy-head"><h3>04 / Серия сторис</h3><span class="label">STORIES / FAQ</span></div>
+        <p>Кадр 1: «Что делает модель Линц особенной?»
+Кадр 2: «Декоративный запах спереди создаёт асимметрию».
+Кадр 3: «Прямой крой и плотная костюмная ткань».
+Кадр 4: «Модель входит в костюм с пиджаком Линц».
+Кадр 5: «Рассмотреть детали можно в карточке товара» + ссылка.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">07 / ART DIRECTION</div><h2>Визуальные рекомендации.</h2></div>
+      <p class="section-intro">Визуальная система должна помогать рассмотреть изделие, а не спорить с ним за внимание.</p>
+    </div>
+    <div class="visual-grid">
+      <article class="visual"><b>01 / Фон</b><p>Светлый нейтральный фон для каталожных деталей; тёмный или городской — для цельного образа.</p></article>
+      <article class="visual"><b>02 / Крупность</b><p>Чередовать полный рост, средний план и макро детали пояса.</p></article>
+      <article class="visual"><b>03 / Движение</b><p>Использовать шаг, поворот и естественную смену ракурса, чтобы показать посадку.</p></article>
+      <article class="visual"><b>04 / Графика</b><p>Короткие подписи, спокойная типографика, минимум декоративных элементов.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="eyebrow">08 / EVALUATION</div><h2>Как оценивать результат.</h2></div>
+      <p class="section-intro">Это гипотезы для тестирования, а не обещание охватов или продаж. Сравнивать стоит с обычными публикациями бренда на той же площадке.</p>
+    </div>
+    <div class="panel">
+      <h3>Сигналы, за которыми можно наблюдать</h3>
+      <p>Для видео — удержание и досмотры; для карусели — сохранения и переходы между карточками; для сторис — ответы и клики по ссылке. Дополнительно можно отслеживать переходы в карточку товара и вопросы о модели.</p>
+      <div class="metrics"><span>Удержание видео</span><span>Досмотры</span><span>Сохранения</span><span>Ответы на сторис</span><span>Переходы к товару</span></div>
+    </div>
+    <div class="source">
+      <b style="color:#fff">Источники и границы кейса</b><br>
+      Фактические сведения о модели взяты из <a href="https://www.gate31.ru/product/bryuki-lints-s-asimmetrichnym-poyasom" target="_blank" rel="noopener">официальной карточки брюк Линц на сайте GATE31</a>. Фотографии товара загружаются с официального CDN сайта бренда. Аналитические выводы, контент-план, сценарии и тексты — самостоятельная концептуальная разработка FORMA. Не являются официальными материалами GATE31.
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta">
+    <div><div class="eyebrow">FORMA / CONTENT STUDIO</div><h2>От исследования — к системе контента.</h2><p>Так FORMA превращает особенности продукта в понятный план публикаций и готовые материалы для команды.</p></div>
+    <a class="btn" href="../index.html#contact">Обсудить проект <span>↗</span></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="../index.html">FORMA®</a>
+    <p>© FORMA® · CASE 001 · 2026</p>
+    <a class="back" href="../index.html#cases">← Вернуться на сайт</a>
+  </div>
+</footer>
+</body>
+</html>
